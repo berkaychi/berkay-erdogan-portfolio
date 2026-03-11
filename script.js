@@ -16,3 +16,20 @@ window.addEventListener("scroll", () => {
     }
   });
 });
+
+const scrollTopButton = document.querySelector(".scroll-top");
+
+scrollTopButton.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+});
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) {
+    scrollTopButton.classList.add("active");
+  } else {
+    scrollTopButton.classList.remove("active");
+  }
+});
