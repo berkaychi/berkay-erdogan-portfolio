@@ -260,9 +260,13 @@ footer {
   padding: 0;
   outline: none;
   cursor: pointer;
-  transition: transform 0.3s ease-in-out;
 
-  display: none;
+  visibility: hidden;
+  opacity: 0;
+
+  transition:
+    transform 0.4s ease-in-out,
+    opacity 0.5s ease-in-out;
 }
 
 .scroll-top:hover {
@@ -270,7 +274,8 @@ footer {
 }
 
 .scroll-top.active {
-  display: flex;
+  opacity: 1;
+  visibility: visible;
 }
 
 .scroll-top i {
