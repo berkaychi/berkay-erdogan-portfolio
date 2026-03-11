@@ -1,6 +1,10 @@
+* {
+  box-sizing: border-box;
+}
 html {
   scroll-behavior: smooth;
 }
+
 body {
   font-family: "Poppins", "sans-serif";
   margin: 0;
@@ -8,6 +12,7 @@ body {
   background-color: #0f172a;
   color: #e2e8f0;
 }
+
 header {
   background-color: #0f172a;
   border-bottom: 1px solid #1e293b;
@@ -56,10 +61,13 @@ header {
 section {
   padding: 15px;
   margin: 30px;
+}
+
+#about {
   text-align: center;
 }
 
-.profile-picture img {
+#about img {
   width: 150px;
   height: 150px;
   border-radius: 50%;
@@ -70,7 +78,7 @@ section {
   transition: transform 0.3s ease-in-out;
 }
 
-.profile-picture img:hover {
+#about img:hover {
   transform: scale(1.1);
 }
 
@@ -280,4 +288,29 @@ footer {
 
 .scroll-top i {
   color: #00e5a0;
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 8px 12px;
+    margin: 15px;
+  }
+
+  .navbar ul li a {
+    font-size: 12px;
+    padding: 6px 8px;
+  }
+
+  #projects {
+    padding: 40px 16px;
+  }
+
+  .social-links {
+    align-items: center;
+  }
+
+  .social-links a {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
 }
