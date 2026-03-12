@@ -1,3 +1,12 @@
+const savedTheme = localStorage.getItem("theme");
+const bodyElement = document.querySelector("body");
+const themeToggleButton = document.querySelector(".theme-toggle");
+
+if (savedTheme === "light") {
+  bodyElement.classList.add("light-mode");
+  themeToggleButton.classList.replace("fa-moon", "fa-sun");
+}
+
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll(".navlist li a");
 
@@ -48,14 +57,14 @@ setInterval(() => {
   }, 400);
 }, 2500);
 
-const themeToggleButton = document.querySelector(".theme-toggle");
-const bodyElement = document.querySelector("body");
 themeToggleButton.addEventListener("click", () => {
   if (bodyElement.classList.contains("light-mode")) {
     bodyElement.classList.remove("light-mode");
     themeToggleButton.classList.replace("fa-sun", "fa-moon");
+    localStorage.setItem("theme", "dark");
   } else {
     bodyElement.classList.add("light-mode");
     themeToggleButton.classList.replace("fa-moon", "fa-sun");
+    localStorage.setItem("theme", "light");
   }
 });
