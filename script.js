@@ -47,3 +47,15 @@ setInterval(() => {
     aboutTitle.classList.remove("fade-out");
   }, 400);
 }, 2500);
+
+const themeToggleButton = document.querySelector(".theme-toggle");
+const bodyElement = document.querySelector("body");
+themeToggleButton.addEventListener("click", () => {
+  if (bodyElement.classList.contains("light-mode")) {
+    bodyElement.classList.remove("light-mode");
+    themeToggleButton.classList.replace("fa-sun", "fa-moon");
+  } else {
+    bodyElement.classList.add("light-mode");
+    themeToggleButton.classList.replace("fa-moon", "fa-sun");
+  }
+});

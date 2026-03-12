@@ -13,13 +13,39 @@ body {
   color: #e2e8f0;
 }
 
+body.light-mode {
+  background-color: #e8eaed;
+  color: #1e293b;
+}
+
 header {
   background-color: #0f172a;
   border-bottom: 1px solid #1e293b;
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease;
   padding: 16px 0;
   position: sticky;
   top: 0;
   z-index: 100;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.theme-toggle {
+  position: absolute;
+  right: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
 }
 
 .navbar ul {
@@ -36,6 +62,10 @@ header {
 
 .navbar ul li a {
   color: #94a3b8;
+  transition:
+    color 0.3s ease-in-out,
+    transform 0.2s ease-in-out,
+    text-shadow 0.3s ease-in-out;
   display: inline-block;
   text-decoration: none;
   font-size: 15px;
@@ -52,10 +82,29 @@ header {
   transform: scale(1.1);
 }
 
+body.light-mode .navbar ul li a {
+  color: #526477;
+}
+
+body.light-mode .navbar ul li a:hover {
+  color: #008f65;
+  text-shadow: 0 0 1px #008f65;
+}
+
 .navbar ul li a.active {
   color: #00e5a0;
   text-shadow: 0 0 1px #00e5a0;
   transform: scale(1.1);
+}
+
+body.light-mode .navbar ul li a.active {
+  color: #008f65;
+  text-shadow: 0 0 1px #008f65;
+}
+
+body.light-mode header {
+  background-color: #dcdfe3;
+  border-bottom-color: #b8bec4;
 }
 
 section {
@@ -78,6 +127,10 @@ section {
   transition: transform 0.3s ease-in-out;
 }
 
+body.light-mode #about img {
+  border-color: #008f65;
+}
+
 #about img:hover {
   transform: scale(1.1);
 }
@@ -88,12 +141,21 @@ section {
   margin-bottom: 10px;
 }
 
+body.light-mode #about h1 {
+  color: #1e293b;
+}
+
 #about h2 {
   font-size: 18px;
   color: #00e5a0;
   margin-bottom: 15px;
   text-shadow: 0 0 1px #00e5a0;
   transition: opacity 0.4s ease-in-out;
+}
+
+body.light-mode #about h2 {
+  color: #008f65;
+  text-shadow: 0 0 1px #008f65;
 }
 
 #about h2.fade-out {
@@ -106,6 +168,18 @@ section {
   line-height: 1.8;
   max-width: 500px;
   margin: 0 auto 32px;
+}
+
+body.light-mode #about p {
+  color: #526477;
+}
+
+body.light-mode .primary-btn {
+  background-color: #008f65;
+}
+
+body.light-mode .primary-btn:hover {
+  background-color: #007a57;
 }
 
 .primary-btn {
@@ -141,10 +215,24 @@ section {
   color: #00e5a0;
 }
 
+body.light-mode .secondary-btn {
+  color: #1e293b;
+  border-color: #b8bec4;
+}
+
+body.light-mode .secondary-btn:hover {
+  border-color: #008f65;
+  color: #008f65;
+}
+
 #skills {
   padding: 50px 20px;
   border-top: 1px solid #1e293b;
   text-align: center;
+}
+
+body.light-mode #skills {
+  border-top: 1px solid #b8bec4;
 }
 
 .section-tittle {
@@ -152,6 +240,10 @@ section {
   font-weight: 700;
   color: #f1f5f9;
   margin-bottom: 40px;
+}
+
+body.light-mode .section-tittle {
+  color: #1e293b;
 }
 
 .skills-list {
@@ -182,10 +274,25 @@ section {
   transform: scale(1.1);
 }
 
+body.light-mode .skill-tag {
+  background-color: #d0d4d9;
+  border-color: #b8bec4;
+  color: #1e293b;
+}
+
+body.light-mode .skill-tag:hover {
+  border-color: #008f65;
+  color: #008f65;
+}
+
 #projects {
   border-top: 1px solid #1e293b;
   padding: 80px 40px;
   text-align: center;
+}
+
+body.light-mode #projects {
+  border-top: 1px solid #b8bec4;
 }
 
 .project-container {
@@ -211,6 +318,15 @@ section {
 .project-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.6);
+}
+
+body.light-mode .project-card {
+  background-color: #d0d4d9;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .project-card:hover {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
 }
 
 .project-img {
@@ -247,6 +363,14 @@ section {
   margin-bottom: 20px;
 }
 
+body.light-mode .project-body h3 {
+  color: #1e293b;
+}
+
+body.light-mode .project-body p {
+  color: #526477;
+}
+
 .social-links {
   display: flex;
   justify-content: center;
@@ -260,6 +384,19 @@ footer {
   text-align: center;
   color: #64758b;
   font-size: 15px;
+}
+
+body.light-mode footer {
+  border-top-color: #b8bec4;
+  color: #526477;
+}
+
+body.light-mode #contacts h2 {
+  color: #1e293b;
+}
+
+body.light-mode #contacts p {
+  color: #526477;
 }
 
 .scroll-top {
