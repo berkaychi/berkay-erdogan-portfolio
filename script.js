@@ -33,3 +33,17 @@ window.addEventListener("scroll", () => {
     scrollTopButton.classList.remove("active");
   }
 });
+
+const aboutTitle = document.querySelector("#about h2");
+const titles = ["Full-Stack Developer", ".NET Developer", "Angular Developer"];
+let titleIndex = 0;
+
+setInterval(() => {
+  aboutTitle.classList.add("fade-out");
+
+  setTimeout(() => {
+    titleIndex = (titleIndex + 1) % titles.length;
+    aboutTitle.textContent = titles[titleIndex];
+    aboutTitle.classList.remove("fade-out");
+  }, 400);
+}, 2500);
