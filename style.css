@@ -194,7 +194,7 @@ body.light-mode .primary-btn:hover {
 }
 
 .primary-btn:hover {
-  background-color: #00c98a;
+  background-color: #008f65;
 }
 
 .secondary-btn {
@@ -204,7 +204,7 @@ body.light-mode .primary-btn:hover {
   font-size: 14px;
   padding: 12px 24px;
   border-radius: 8px;
-  border: 1px solid #1e293b;
+  border: 1px solid #334155;
   transition:
     border-color 0.2s,
     color 0.2s;
@@ -235,14 +235,14 @@ body.light-mode #skills {
   border-top: 1px solid #b8bec4;
 }
 
-.section-tittle {
+.section-title {
   font-size: 24px;
   font-weight: 700;
   color: #f1f5f9;
   margin-bottom: 40px;
 }
 
-body.light-mode .section-tittle {
+body.light-mode .section-title {
   color: #1e293b;
 }
 
@@ -347,6 +347,23 @@ body.light-mode .project-card:hover {
 
 .project-body {
   padding: 20px;
+}
+
+.project-tags {
+  gap: 8px;
+}
+
+.tag {
+  font-size: 11px;
+  background-color: #0f172a;
+  color: #00e5a0;
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+
+body.light-mode .tag {
+  background-color: #dde6f0;
+  color: #008f65;
 }
 
 .project-body h3 {
