@@ -47,7 +47,7 @@ portfolio
 
 ## 🗺️ Roadmap
 
-- [ ] Add project card badges and live demo buttons
+- [x] Add project card badges and live demo buttons
 - [ ] Add timeline / experience section
 - [ ] Add contact form (EmailJS)
 - [ ] Add project filtering by technology
